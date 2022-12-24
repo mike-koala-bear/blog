@@ -74,7 +74,3 @@ jobs:
       uses: github/codeql-action/analyze@v2
       with:
         category: "/language:${{matrix.language}}"
-    - name: Trigger CircleCI Pipeline
-      # You may pin to the exact commit or the version.
-      # uses: CircleCI-Public/trigger-circleci-pipeline-action@63a07f869d0e7ae49686c9d898b9cad89311b74c
-      uses: CircleCI-Public/trigger-circleci-pipeline-action@v1.0.6
