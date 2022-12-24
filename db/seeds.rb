@@ -21,3 +21,21 @@ User.create(email: '55577@protonmail.com', password: '557712', password_confirma
     post.comments.create(body: "Comment #{y}", user_id: User.second.id)
   end
 end
+
+# elapsed = Benchmark.measure do
+#   posts = []
+#   kira = User.first
+#   snowlepoard = User.second
+#   1000.times do |x|
+#     puts "Creating post #{x}"
+#     post = Post.new(title: "Title #{x}", body: "Body #{x} Words go here Idk", user: kira)
+
+#     10.times do |y|
+#       puts "Creating comment #{y} for post #{x}"
+#       post.comments.build(body: "Comment #{y}", user: snowlepoard)
+#     end
+#     posts.push(post)
+#   end
+#   Post.import(posts, recursive: true)
+# end
+# puts "Elapsed time is #{elapsed.real} seconds"
