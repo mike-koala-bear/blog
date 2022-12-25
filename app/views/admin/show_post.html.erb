@@ -1,5 +1,3 @@
-
-
 <div class="container">
   <h1 class="text-center">Administrator</h1>
   <%= render 'admin/nav_links' %>
@@ -22,7 +20,7 @@
   <div class="row mt-1">
     <p>
       <strong>Author:</strong>
-      <%= "#{@post.user.email} | #{@post.user.name} | #{pluralize(@post.user.views, "View")}" %>
+      <%= "#{@post.user.email} | #{@post.user.full_name} | #{pluralize(@post.user.views, "View")}" %>
     </p>
   </div>
   <div class="row mt-1">
@@ -32,7 +30,7 @@
     <strong><%= pluralize(@post.comments.count, 'Comment') %>:</strong>
     <% @post.comments.each do |comment| %>
       <div class="row mt-1">
-        <%= comment.user.name %>
+        <%= comment.user.full_name %>
         <%= comment.body %>
       </div>
     <% end %>
