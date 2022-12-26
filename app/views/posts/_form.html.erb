@@ -10,7 +10,10 @@
       </ul>
     </div>
   <% end %>
-
+  <div>
+    <%= form.label :category, style: "display: block" %>
+    <%= form.select :category_id, options_for_select(Category.all.order(name: :asc).collect { |cat| [cat.name, cat.id] }) %>
+  </div>
   <div>
     <%= form.label :title, style: "display: block" %>
     <%= form.text_field :title %>
